@@ -258,6 +258,7 @@ section {
 
 
 .about_content-details-para {
+    display: flex;
     font-size: 1.8rem;
     color: #666;
     max-width: 60rem;
@@ -627,6 +628,11 @@ form btn2 {
     }
 
     .about-heading span::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about_content-details-para {
+        display: flex;
         margin-left: auto;
         margin-right: auto;
     }
