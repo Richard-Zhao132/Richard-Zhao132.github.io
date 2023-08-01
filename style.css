@@ -85,7 +85,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: lightblue;
     padding-top: 5px;
     padding-bottom: 1px;
     padding-left: 7%;
@@ -95,9 +95,9 @@ nav{
 
 #logo{
 
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 
@@ -123,7 +123,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: lightblue;
+    background: lightskyblue;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -131,7 +131,7 @@ nav ul li a::after{
 }
 
 nav ul li a:hover{
-    color: #666;
+    color: white;
 }
 
 
@@ -141,12 +141,12 @@ nav ul li a:hover::after{
 
 .sticky {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     z-index: 500
 }
 
-.sticky + .h2 {
+.sticky + .container {
     padding-top: 60px;
 }
 
@@ -187,7 +187,7 @@ nav ul li a:hover::after{
 }
 
 #about {
-    background: #fafafa;
+    background: white;
     box-shadow: 0px -4px 10px lightgray;
 }
 
@@ -338,7 +338,7 @@ a {
     content: '';
     display: block;
     height: 0.2rem;
-    width: 3.5rem;   
+    width: 4.9rem;   
 }
 
 
@@ -484,7 +484,6 @@ img {
     text-transform: uppercase;
     letter-spacing: 1px;
     letter-spacing: 1px;
-    text-align: center;
     margin-bottom: 3.5rem;
     position: relative;
     color: #111;
@@ -498,28 +497,27 @@ img {
     height: 0.4rem;
     width: 6rem;
     margin-bottom: 1.25rem;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 .row {
     display: grid;
-    grid-template-columns: 1.25fr .75fr;
+    grid-template-columns: .75fr 1.25fr;
     grid-gap: 20rem;
-    padding-top: 6em;
+    padding-top: 5.5em;
 }
 
-.contact-right {
+.contact-left {
     flex-basis: 35%;
 }
 
-.contact-right p {
+.contact-left p {
     margin-top: 30px;
     font-size: 1.8rem;
     color: #666;
 }
 
-.contact-right p i{
+.contact-left p i{
     color: black;
     margin-right: 15px;
     font-size: 25px;
@@ -543,7 +541,7 @@ img {
     transform: translateY(-5px);
 }
 
-.contact-right {
+.contact-left {
     flex-basis: 60%;
 }
 
@@ -567,7 +565,7 @@ img {
     transform: translateY(-5px);
 }
 
-.contact-left form{
+.contact-right form{
     width: 100%;
 }
 
@@ -699,6 +697,11 @@ form btn2 {
 
     nav {
         justify-content: center;
+    }
+
+    .contact-heading span::after {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .row {
