@@ -460,11 +460,12 @@ a {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
 }
 
-#Tkinter-img {
+#single-img {
     width: 100%;
+    padding-top: 9rem;
     
 }
 
@@ -473,6 +474,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 #contact {
     background: #F8F8FF;
@@ -606,6 +608,14 @@ form btn2 {
 }
 
 @media screen and (max-width: 800px){
+
+    #navbar {
+        padding: 30px;
+    }
+
+    .navbar-items {
+        display: none;
+    }
 
     .about_content {
         display: grid;
