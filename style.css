@@ -19,7 +19,6 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-color: black;
     background-color: #F8F8FF;
     background-size: cover;
     background-position: center; 
@@ -150,8 +149,16 @@ h3 {
     padding-top: 91px;
 }
 
+.fa-folder-open {
+    color: #CED1DA;
+}
+
+.fa-folder-open:hover {
+    color: lightskyblue;
+}
+
 .home-text{
-    margin-top: 14%;
+    margin-top: 13%;
     font-size: 2em;
     color: black;  
     margin-left: 0%; 
@@ -172,6 +179,10 @@ h3 {
     color: #89CFF0;
 }
 
+#dev:hover {
+    color: 	#3E8DE3;
+}
+
 #dev i {
     color: #666;
 }
@@ -181,7 +192,7 @@ h3 {
 
 .home-rightside{
     margin-right: 0%;
-    margin-top: 11%;
+    margin-top: 10%;
     font-size: 55px;
     color: black;
 }
