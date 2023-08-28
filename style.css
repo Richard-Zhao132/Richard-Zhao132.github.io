@@ -85,7 +85,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: lightblue;
+    background-color: #A6DAF4; /*#89CFF0*/
     padding-top: 5px;
     padding-bottom: 1px;
     padding-left: 7%;
@@ -169,7 +169,7 @@ nav ul li a:hover::after{
 
 #dev {
     font-size: 65px;
-    color: lightblue;
+    color: #89CFF0;
 }
 
 #dev i {
@@ -234,7 +234,7 @@ section {
 
 
 .about-heading span::after {
-    background-color: lightblue;
+    background-color: #89CFF0;
     border-radius: 0.25rem;
     content: '';
     display: block;
@@ -279,7 +279,7 @@ section {
 }
 
 .btn {
-    background: lightblue;
+    background: #89CFF0;
     color: #333;
     letter-spacing: 1px;
     display: inline-block;
@@ -290,7 +290,7 @@ section {
 }
 
 .btn--theme {
-    background: lightblue;
+    background: #89CFF0;
     color: #111;
 }
 
@@ -333,7 +333,7 @@ a {
 
 
 .about_content-coding-title span::after {
-    background-color: lightblue;
+    background-color: #89CFF0;
     border-radius: 0.25rem;
     content: '';
     display: block;
@@ -492,7 +492,7 @@ img {
 }
 
 .contact-heading span::after {
-    background-color: lightblue;
+    background-color: #89CFF0;
     border-radius: 0.25rem;
     content: '';
     display: block;
@@ -539,7 +539,7 @@ img {
     transition: transform 0.5s;  
 }
 .social-icons a:hover {
-    color: lightblue;
+    color: #89CFF0;
     transform: translateY(-5px);
 }
 
@@ -549,7 +549,7 @@ img {
 
 .btn2 {
     display: inline-block;
-    background: lightblue; /*#facf0e*/
+    background: #89CFF0; /*#facf0e*/
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
