@@ -154,7 +154,7 @@ h3 {
 }
 
 .fa-folder-open:hover {
-    color: lightskyblue;
+    color: orange;
 }
 
 .home-text{
@@ -176,11 +176,11 @@ h3 {
 
 #dev {
     font-size: 65px;
-    color: #89CFF0;
+    color: #3E8DE3;
 }
 
 #dev:hover {
-    color: 	#3E8DE3;
+    color: 	orange;
 }
 
 #dev i {
@@ -213,7 +213,7 @@ h3 {
     padding: 2px;
     border-top-color: #62b4de;
     border-left-color: #ff5722;
-    filter: drop-shadow(0 0 8px #3189b5) ;
+    filter: drop-shadow(0 0 1px #3189b5) ; /*8*/
 }
 
 
@@ -241,6 +241,7 @@ section {
     margin-bottom: 3.5rem;
     position: relative;
     color: #111;
+    
 }
 
 
@@ -252,6 +253,8 @@ section {
     height: 0.4rem;
     width: 6rem;
     margin-bottom: 1.25rem;
+    box-shadow: 0px 0px 0px #FED8B1;
+
 }
 
 .about_content-title {
@@ -260,6 +263,8 @@ section {
     margin-bottom: 3rem;
 }
 
+
+
 .about_content {
     display: grid;
     grid-template-columns: .9fr 1.1fr;
@@ -267,6 +272,14 @@ section {
 }
 
 
+
+.skills_row-content {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 .about_content-details-para {
     display: flex;
@@ -296,7 +309,7 @@ section {
     display: inline-block;
     font-weight: 700;
     border-radius: 5px;
-    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15); /*5 15*/
     transition: transform .3s;
 }
 
@@ -311,7 +324,7 @@ a {
 
 
 .btn:hover {
-    transform: translateY(-3px)
+    transform: translateY(-4px);
 }
 
 .about__content-title {
@@ -348,8 +361,9 @@ a {
     border-radius: 0.25rem;
     content: '';
     display: block;
-    height: 0.2rem;
-    width: 4.9rem;   
+    height: 0.3rem;
+    width: 100%;   /*4.9rem*/
+
 }
 
 
@@ -394,6 +408,7 @@ a {
     height: 0.4rem;
     width: 6rem;
     margin-bottom: 1.25rem;
+    box-shadow: 0px 0px 0px pink;
 }
 
 
@@ -436,8 +451,8 @@ a {
     border-radius: 0.25rem;
     content: '';
     display: block;
-    height: 0.2rem;
-    width: 13rem;
+    height: 0.3rem;
+    width: 100%; /*13rem*/
 }
 
 .github_link {
@@ -510,6 +525,7 @@ img {
     height: 0.4rem;
     width: 6rem;
     margin-bottom: 1.25rem;
+    box-shadow: 3px 3px 5px lightblue;
 
 }
 
@@ -567,7 +583,7 @@ img {
     display: inline-block;
     font-weight: 700;
     border-radius: 5px;
-    box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15); /*2 15*/
     transition: transform .3s;
     padding: 1.5rem 5rem;
     font-size: 1.6rem;
@@ -660,13 +676,21 @@ form btn2 {
         text-align: center;
         display: flex;
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .about_content-coding-title {
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
     .about_content-coding-title span::after {
         margin-left: auto;
         margin-right: auto;
-        width: 3.8rem;
+        width: 100%; /*3.8rem*/
     }
 
     .project_row {
@@ -686,7 +710,7 @@ form btn2 {
     .project_row-content-title span::after {
         margin-left: auto;
         margin-right: auto;
-        width: 8rem;
+        width: 100%; /*8rem*/
     }
 
     .project_skills {
