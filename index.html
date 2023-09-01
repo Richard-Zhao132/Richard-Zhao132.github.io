@@ -19,12 +19,18 @@
                     <p id="logo">Richard Zhao</p>
                 </div>
                 
-                <ul class="navbar-items">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="navbar-menu">
+                    <li class="navbar-item home"><a href="#header">Home</a></li>
+                    <li class="navbar-item about"><a href="#about">About</a></li>
+                    <li class="navbar-item projects"><a href="#projects">Projects</a></li>
+                    <li class="navbar-item contact"><a href="#contact">Contact</a></li>
                 </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
         
             </div>
         
@@ -371,6 +377,43 @@ Developed a robust Employee Management System using Java Spring Boot, incorporat
                 navbar.classList.remove("sticky");
             }
         }
+    </script>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".navbar-menu");
+        const navItemHome = document.querySelector(".home")
+        const navItemAbout = document.querySelector(".about")
+        const navItemProjects = document.querySelector(".projects")
+        const navItemContact = document.querySelector(".contact")
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            about.classList.toggle("active")
+        } )
+
+        navItemHome.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        } )
+
+        navItemAbout.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        } )
+
+        navItemProjects.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        } )
+
+        navItemContact.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        } )
+
+
     </script>
 
 <script>

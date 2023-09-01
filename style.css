@@ -92,6 +92,22 @@ h3 {
     box-shadow: 0 1px 2px 0 #F8F8FF;
 }
 
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
 #logo{
 
     font-size: 2.2em;
@@ -136,6 +152,11 @@ h3 {
 
 #navbar ul li a:hover::after{
     width: 100%;
+}
+
+.navbar-menu {
+    display: flex;
+
 }
 
 .sticky {
@@ -614,7 +635,6 @@ form btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
-    cursor: pointer; 
 }
 
 .ending {
@@ -636,13 +656,43 @@ form btn2 {
 
 @media screen and (max-width: 800px){
 
-    #navbar {
-        padding: 30px;
+    .hamburger {
+        display: block;
     }
 
-    .navbar-items {
-        display: none;
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .navbar-menu {
+        position: fixed;
+        left: -100%;
+        top: 57px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #A6DAF4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbar-item {
+        margin: 16px 0;
+    }
+
+    .navbar-menu.active {
+        left: 0%;
+    }
+
 
     .about_content {
         display: grid;
@@ -659,14 +709,15 @@ form btn2 {
 
     }
     
+    #logo {
+       font-size: 1.5em; 
+    }    
     
     #dev {
         font-size: 50px;
     }
 
-    #logo {
-        display: none;
-    }
+
 
     #profile-img {
         display: none;
