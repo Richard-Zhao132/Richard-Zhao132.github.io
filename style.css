@@ -134,6 +134,10 @@ ul li a {
     display: block;
 }
 
+#navbar {
+    z-index: 700;
+}
+
 #navbar ul li{
     display: inline-block;
     list-style: none;
@@ -182,7 +186,7 @@ ul li a {
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 500;
+    z-index: 999;
 }
 
 .sticky + .container {
@@ -215,7 +219,7 @@ ul li ul.dropdown {
     width: 100%;
     background: #A6DAF4;
     position: absolute;
-    z-index: 800;
+    z-index: 999;
     display: none;
 }
 
@@ -561,6 +565,7 @@ a {
     margin-bottom: 3.5rem;
     position: relative;
     color: #111;
+    z-index: 100;
 }
 
 .project-heading span::after {
@@ -572,6 +577,7 @@ a {
     width: 6rem;
     margin-bottom: 1.25rem;
     box-shadow: 0px 0px 0px pink;
+    z-index: 100;
 }
 
 
@@ -821,6 +827,10 @@ form btn2 {
 
     ul li a {
         display:inline-block;
+    }
+
+    .navbar-menu-mobile {
+        z-index: 999;
     }
     
 
