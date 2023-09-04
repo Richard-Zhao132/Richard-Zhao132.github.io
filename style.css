@@ -432,8 +432,8 @@ section {
     letter-spacing: 1px;
     display: inline-block;
     font-weight: 700;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15); /*5 15*/
+    border-radius: 25px;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.15); /*5 15*/
     transition: transform .3s;
 }
 
@@ -759,8 +759,8 @@ img {
     letter-spacing: 1px;
     display: inline-block;
     font-weight: 700;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15); /*2 15*/
+    border-radius: 25px;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.15); /*2 15*/
     transition: transform .3s;
     padding: 1.5rem 5rem;
     font-size: 1.6rem;
