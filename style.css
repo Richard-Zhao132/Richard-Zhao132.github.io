@@ -915,6 +915,7 @@ form btn2 {
 
     .main-container {
         text-align: left;
+        display: block;
     }
     
 
@@ -1009,8 +1010,6 @@ form btn2 {
     .home-text{
         margin-top: 10%;
         font-size: 2em;
-        text-align: center;
-        justify-content: center;
     }
 
     .home-text h1{ 
