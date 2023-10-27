@@ -97,7 +97,7 @@
                             <div class="project_skills_skill">CodeBlock</div>
                         </div>
 
-                          <h3 class="github_link">Github Link:</h3>
+                          <h3 class="github_link">GitHub Link:</h3>
                           <a class="link" href="https://github.com/jdegiac/golf-project" target="_blank">https://github.com/jdegiac/golf-project</a>
                     </div>
                     <div class="project_row-image">
@@ -130,55 +130,65 @@
     </div>
 </body>
 
+<!--
+
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+-->
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    let initialScroll = true;
+    
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+      if (initialScroll) {
+        initialScroll = false; // Ignore the initial scroll
+      } else if (prevScrollPos > currentScrollPos) {
+        // User is scrolling up
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        // User is scrolling down
+        document.getElementById("navbar").style.top = "-100px"; // Adjust the value as needed
+      }
+      prevScrollPos = currentScrollPos;
+    };
+         
+    
+ </script>
 
     <script>
-        window.onscroll = function() {myFunction()};
-    
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-    
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-    
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".navbar-menu-mobile");
-        const navItemHome = document.querySelector(".home")
-        const navItemAbout = document.querySelector(".about")
-        const navItemProjects = document.querySelector(".projects")
-        const navItemContact = document.querySelector(".contact")
-    
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-            about.classList.toggle("active")
-        } )
-    
-        navItemHome.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemAbout.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemProjects.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemContact.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
+       const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-menu-mobile");
+
+hamburger.addEventListener("click", toggleMobileMenu);
+
+function toggleMobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+// Add a scroll event listener to handle scrolling
+window.addEventListener("scroll", function () {
+  if (navMenu.classList.contains("active")) {
+    // If the mobile menu is active and scrolling occurs, close the menu and reset its position
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+});
     
     
     </script>

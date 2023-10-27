@@ -76,8 +76,15 @@
 
     </div>
 
+    <h3></h3>
+    <div class="ending">
+        <p><i class="fa-regular fa-copyright"></i> Richard Zhao 2023</p>
+    </div>
+
+
 
     
+    <!--
 
     <script>
         window.onscroll = function() {myFunction()};
@@ -94,60 +101,51 @@
         }
     </script>
 
+    -->
+
+
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".navbar-menu-mobile");
-        const navItemHome = document.querySelector(".home")
-        const navItemAbout = document.querySelector(".about")
-        const navItemProjects = document.querySelector(".projects")
-        const navItemContact = document.querySelector(".contact")
-
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemHome.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemAbout.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemProjects.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemContact.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-
-    </script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwrsVsvVMirZvUgddPxrzm27JLIzNhecbp9AOm9h3_9nAVUr-4YB015U2MA0k1zbNSjsg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-    })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
+        let prevScrollPos = window.pageYOffset;
+        let initialScroll = true;
+        
+        window.onscroll = function () {
+          const currentScrollPos = window.pageYOffset;
+          if (initialScroll) {
+            initialScroll = false; // Ignore the initial scroll
+          } else if (prevScrollPos > currentScrollPos) {
+            // User is scrolling up
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            // User is scrolling down
+            document.getElementById("navbar").style.top = "-100px"; // Adjust the value as needed
+          }
+          prevScrollPos = currentScrollPos;
+        };
+             
+        
+     </script>
+    
+        <script>
+           const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar-menu-mobile");
+    
+    hamburger.addEventListener("click", toggleMobileMenu);
+    
+    function toggleMobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+    
+    // Add a scroll event listener to handle scrolling
+    window.addEventListener("scroll", function () {
+      if (navMenu.classList.contains("active")) {
+        // If the mobile menu is active and scrolling occurs, close the menu and reset its position
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    });
+        
+        
+        </script>
 </body>
 </html>

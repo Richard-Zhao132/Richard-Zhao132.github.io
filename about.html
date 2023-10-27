@@ -66,7 +66,7 @@
                     <div class="about_content-details">
                         <p class="about_content-details-para">
                             
-                            Hello, I'm Richard Zhao, a recent graduate with a Bachelor's degree in Computer Science from Suffolk University. I have a passion for problem-solving and a strong desire to contribute to the field of technology. With a solid foundation in coding and a diverse skill set, I am eager to embark on a fulfilling career in software development.
+                            Hello, I'm Richard Zhao, a graduate with a Bachelor's degree in Computer Science from Suffolk University. I have a passion for problem-solving and a strong desire to contribute to the field of technology. With a solid foundation in coding and a diverse skill set, I am eager to embark on a fulfilling career in software development.
                           
                         </p>
         
@@ -94,13 +94,13 @@
             <h3 class="about_content-coding-title"><span class="skill-sec-skill">Backend:</span></h3>
             
             <div class="skills">
-              <div class="skills_skill"><a href="pythonProjects.html">Python</a></div>
-              <div class="skills_skill"><a href="javaProjects.html">Java</a></div>
-              <div class="skills_skill"><a href="cProjects.html">C++</a></div>
-              <div class="skills_skill"><a href="cProjects.html">C</a></div>
-              <div class="skills_skill"><a href="javaProjects.html">MySQL</a></div>
-              <div class="skills_skill"><a href="cProjects.html">Assembly</a></div>
-              <div class="skills_skill"><a href="cProjects.html">Bash</a></div>
+                <a href="pythonProjects.html"><div class="skills_skill">Python</div></a>
+              <a href="javaProjects.html"><div class="skills_skill">Java</div></a>
+              <a href="cProjects.html"><div class="skills_skill">C++</div></a>
+              <a href="cProjects.html"><div class="skills_skill">C</div></a>
+              <a href="javaProjects.html"><div class="skills_skill">MySQL</div></a>
+              <a href="cProjects.html"><div class="skills_skill">Assembly</div></a>
+             <a href="cProjects.html"><div class="skills_skill">Bash</div></a>
               </div>
               
 
@@ -108,11 +108,11 @@
               
               <h3 class="about_content-coding-title"><span class="skill-sec-skill">Frameworks:</span></h3>
               <div class="skills">
-              <div class="skills_skill"><a href="javaProjects.html">Spring</a></div>
+              <a href="javaProjects.html"><div class="skills_skill">Spring</div></a>
               <div class="skills_skill">Angular</div>
-              <div class="skills_skill"><a href="cProjects.html">Qt</a></div>
-              <div class="skills_skill"><a href="pythonProjects.html">Flask</a></div>
-              <div class="skills_skill"><a href="pythonProjects.html">Django</a></div>
+              <a href="cProjects.html"><div class="skills_skill">Qt</div></a>
+              <a href="pythonProjects.html"><div class="skills_skill">Flask</div></a>
+              <a href="pythonProjects.html"><div class="skills_skill">Django</div></a>
               <div class="skills_skill">Bootstrap</div>
                 </div>
 
@@ -151,76 +151,69 @@
         <p><i class="fa-regular fa-copyright"></i> Richard Zhao 2023</p>
     </div>
     
-
-    <script>
-        window.onscroll = function() {myFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".navbar-menu-mobile");
-        const navItemHome = document.querySelector(".home")
-        const navItemAbout = document.querySelector(".about")
-        const navItemProjects = document.querySelector(".projects")
-        const navItemContact = document.querySelector(".contact")
-
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemHome.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemAbout.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemProjects.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-        navItemContact.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-
-
-    </script>
+</body>
+    <!--
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwrsVsvVMirZvUgddPxrzm27JLIzNhecbp9AOm9h3_9nAVUr-4YB015U2MA0k1zbNSjsg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-    })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    window.onscroll = function() {myFunction()};
 
-</body>
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+-->
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    let initialScroll = true;
+    
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+      if (initialScroll) {
+        initialScroll = false; // Ignore the initial scroll
+      } else if (prevScrollPos > currentScrollPos) {
+        // User is scrolling up
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        // User is scrolling down
+        document.getElementById("navbar").style.top = "-100px"; // Adjust the value as needed
+      }
+      prevScrollPos = currentScrollPos;
+    };
+         
+    
+ </script>
+
+    <script>
+       const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-menu-mobile");
+
+hamburger.addEventListener("click", toggleMobileMenu);
+
+function toggleMobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+// Add a scroll event listener to handle scrolling
+window.addEventListener("scroll", function () {
+  if (navMenu.classList.contains("active")) {
+    // If the mobile menu is active and scrolling occurs, close the menu and reset its position
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+});
+    
+    
+    </script>
+
+
 </html>

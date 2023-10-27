@@ -10,6 +10,12 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    
+}
+
+
 body{
     background-color: white;
     color: black;
@@ -23,8 +29,6 @@ body{
     background-size: cover;
     background-position: center; 
 }
-
-
 
 div {
     display: block;
@@ -90,6 +94,11 @@ h3 {
     padding-left: 7%;
     padding-right: 7%;
     box-shadow: 0 1px 2px 0 #F8F8FF;
+    transition: top 0.3s;
+    position: fixed;
+    width: 100%; /* Added for full width */
+    left: 0;    /* Added for full width */
+    right: 0;   /* Added for full width */
 }
 
 
@@ -150,6 +159,7 @@ ul li a {
     font-size: 18px;
     position: relative;
     margin-right: 25px;
+    transition: background-color 0.3s;
 }
 
 #navbar ul li a::after{
@@ -166,6 +176,7 @@ ul li a {
 
 #navbar ul li a:hover{
     color: royalblue;
+
 }
 
 
@@ -189,19 +200,19 @@ ul li a {
     z-index: 999;
 }
 
-.sticky + .container {
+.container {
+    padding-top: 100px;
+}
+
+.main-container {
     padding-top: 91px;
 }
 
-.sticky + .main-container {
+#contact {
     padding-top: 91px;
 }
 
-.sticky + #contact {
-    padding-top: 91px;
-}
-
-.sticky + #about {
+#about {
     padding-top: 91px;
 }
 
@@ -209,9 +220,11 @@ ul li a {
     color: black;
     font-size: 18px;
     width: 100%;
+    transition: background-color 0.3s;
 }
 .dropdown li a:hover {
     color: royalblue;
+
 }
 
 ul li ul.dropdown li {
@@ -415,6 +428,7 @@ section {
 
 .page-footer a {
     color: #666;
+    transition: background-color 0.3s;
 }
 
 .page-footer a:hover {
@@ -460,11 +474,14 @@ section {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 2rem;
-    background: rgba(153,153,153,.2);
+    background: lightblue;
     border-radius: 20px;
-    font-weight: 600;
-    color: #666;
+    font-weight: 500;
+    color: #333;
 }
+
+
+
 
 .btn--med {
     padding: 1.4rem 5rem;
@@ -484,23 +501,19 @@ section {
     font-weight: 700;
     border-radius: 25px;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,.15); /*5 15*/
-    transition: transform .3s;
+    transition: background-color 0.3s;
 }
 
 .btn--theme {
     background: #89CFF0;
-    color: #111;
-}
-
-a {
-    text-decoration: none;
-
+    color: #333;
 }
 
 
 
 .btn:hover {
-    transform: translateY(-4px);
+    background: #72B2D4;
+    color: #222;
 }
 
 .about__content-title {
@@ -553,20 +566,26 @@ a {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1.6rem;
-    background: rgba(153,153,153,.2);
+    background: #E5E5E5;
     border-radius: 20px;
     font-weight: 600;
-    color: #666;
-    transition: transform 0.35s; 
+    color: #333;
+    transition: background-color 0.3s;
 }
+
+
+.skills_skill a {
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
 
 .skills_skill:hover {
-    transform: translateY(-5px);
+    background: #76B2D9;
+    color: white;
 }
 
-.skills_skill a{
-    color: #666;
-}
 
 .about_content-coding-title {
     font-weight: 700;
@@ -584,9 +603,6 @@ a {
     width: 100%;   /*4.9rem*/
 
 }
-
-
-
 
 
 .skill-sec-skill {
@@ -623,14 +639,13 @@ a {
 }
 
 .project-heading span::after {
-    background: orange; 
+    background: #89CFF0; 
     border-radius: 0.25rem;
     content: '';
     display: block;
     height: 0.4rem;
     width: 6rem;
     margin-bottom: 1.25rem;
-    box-shadow: 0px 0px 0px pink;
     z-index: 100;
 }
 
@@ -665,20 +680,12 @@ a {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1.6rem;
-    background: rgba(153,153,153,.2);
+    background: lightblue;
     border-radius: 20px;
     font-weight: 600;
-    color: #666;
+    color: #333;
 }
 
-.project_row-content-title span::after {
-    background: orange;
-    border-radius: 0.25rem;
-    content: '';
-    display: block;
-    height: 0.3rem;
-    width: 100%; /*13rem*/
-}
 
 .github_link {
     font-size: 1.8rem;
@@ -697,6 +704,7 @@ a {
 
 .link:hover {
     color: #3189b5;
+    transition: background-color 0.3s;
 }
 
 
@@ -809,15 +817,21 @@ img {
     display: inline-block;
     font-weight: 700;
     border-radius: 25px;
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,.15); /*2 15*/
-    transition: transform .3s;
     padding: 1.5rem 5rem;
     font-size: 1.6rem;
     border: none;
+    transition: background-color 0.3s;
 }
 
+.btn--theme {
+    background: #89CFF0;
+    color: #333;
+}
+
+
 .btn2:hover {
-    transform: translateY(-5px);
+    background: #72B2D4;
+    color: #222;
 }
 
 .contact-right form{
@@ -849,7 +863,7 @@ form btn2 {
     background: #262626;
     font-weight: 300;
     font-size: 1.5em;
-    color: #F8F8FF;
+    color: ghostwhite;
 }
 
 #msg{
@@ -902,6 +916,7 @@ form btn2 {
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        top: 57px;
     }
 
 
@@ -912,7 +927,16 @@ form btn2 {
 
     .navbar-menu-mobile.active {
         left: 0%;
+
     }
+
+    &.active {
+        top: 0;
+      }
+
+    body.navbar-menu-mobile.active {
+        overflow: hidden;
+      }
 
 
     .about_content {

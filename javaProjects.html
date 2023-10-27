@@ -69,9 +69,9 @@
 
         <div class="content-list">
             <ul class="content-lisst">
-                <li><spam class="project_page_skill"><b>Spring Boot</b></spam>- Spring Boot is a popular open-source framework for building Java-based web applications and microservices. It's part of the larger Spring ecosystem, which provides comprehensive tools and libraries for Java developers to create enterprise-grade applications. </li>
-                <li><spam class="project_page_skill"><b>Spring Security</b></spam>- Spring Security is a powerful and highly customizable security framework provided by the Spring ecosystem for building secure applications in Java. It is specifically designed to address authentication, authorization, and various other security concerns in web and enterprise applications. Which I can use to secure my Spring Projects.</li>
-                <li><spam class="project_page_skill"><b>MySQL</b></spam>- MySQL is an open-source relational database management system (RDBMS) that is widely used for storing and managing structured data. It is one of the most popular and commonly used database systems in the world. Not Java exclusive, but I have used this database management system in my java project.</li>
+                <li><spam class="project_page_skill">Spring Boot</spam>- Spring Boot is a popular open-source framework for building Java-based web applications and microservices. It's part of the larger Spring ecosystem, which provides comprehensive tools and libraries for Java developers to create enterprise-grade applications. </li>
+                <li><spam class="project_page_skill">Spring Security</spam>- Spring Security is a powerful and highly customizable security framework provided by the Spring ecosystem for building secure applications in Java. It is specifically designed to address authentication, authorization, and various other security concerns in web and enterprise applications. Which I can use to secure my Spring Projects.</li>
+                <li><spam class="project_page_skill">MySQL</spam>- MySQL is an open-source relational database management system (RDBMS) that is widely used for storing and managing structured data. It is one of the most popular and commonly used database systems in the world. Not Java exclusive, but I have used this database management system in my java project.</li>
 
             </ul>
         </div>
@@ -101,7 +101,7 @@
                             <div class="project_skills_skill">MySQL</div>
                         </div>
 
-                          <h3 class="github_link">Github Link:</h3>
+                          <h3 class="github_link">GitHub Link:</h3>
                           <a class="link" href="https://github.com/Richard-Zhao132/SpringBootProj" target="_blank">https://github.com/Richard-Zhao132/SpringBootProj</a>
                     </div>
                     <div class="project_row-image">
@@ -136,7 +136,7 @@
     </div>
 </body>
 
-
+<!--
     <script>
         window.onscroll = function() {myFunction()};
     
@@ -151,40 +151,49 @@
             }
         }
     </script>
+-->
+
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    let initialScroll = true;
     
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+      if (initialScroll) {
+        initialScroll = false; // Ignore the initial scroll
+      } else if (prevScrollPos > currentScrollPos) {
+        // User is scrolling up
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        // User is scrolling down
+        document.getElementById("navbar").style.top = "-100px"; // Adjust the value as needed
+      }
+      prevScrollPos = currentScrollPos;
+    };
+         
+    
+ </script>
+
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".navbar-menu-mobile");
-        const navItemHome = document.querySelector(".home")
-        const navItemAbout = document.querySelector(".about")
-        const navItemProjects = document.querySelector(".projects")
-        const navItemContact = document.querySelector(".contact")
-    
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-            about.classList.toggle("active")
-        } )
-    
-        navItemHome.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemAbout.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemProjects.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
-    
-        navItemContact.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        } )
+       const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-menu-mobile");
+
+hamburger.addEventListener("click", toggleMobileMenu);
+
+function toggleMobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+// Add a scroll event listener to handle scrolling
+window.addEventListener("scroll", function () {
+  if (navMenu.classList.contains("active")) {
+    // If the mobile menu is active and scrolling occurs, close the menu and reset its position
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+});
     
     
     </script>

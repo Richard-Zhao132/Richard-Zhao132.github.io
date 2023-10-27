@@ -70,14 +70,14 @@
 
             <div class="project-list">
                 <ul class="content-list">
-                    <li><spam class="project_page_skill"><b>Flask</b></spam>- Flask is a Python web framework that creates dynamic and interactive web experiences. Flask simplifies web development by offering pre-built components and a clear structure for building web applications, allowing me to create simple, yet powerful applications. </li>
-                    <li><spam class="project_page_skill"><b>Django</b></spam>- Django is a also powerful web framework to create robust and dynamic websites. </li>
-                    <li><spam class="project_page_skill"><b>NLTK</b></spam>- Natural Language Toolkit is a Python library and platform for working with human language data, particularly for tasks related to natural language processing (NLP) and text analysis.</li>
-                    <li><spam class="project_page_skill"><b>Beautiful Soup</b></spam>- Beautiful Soup is a Python library used for web scraping purposes. Beautiful Soup makes it easier to navigate and manipulate the structure of web pages, making web scraping tasks easier.</li>
-                    <li><spam class="project_page_skill"><b>PyPDF2</b></spam>- A Python library for working with PDF files. such as reading, extracting text, merging multiple PDFs, splitting PDFs.</li>
-                    <li><spam class="project_page_skill"><b>CSV Reader</b></spam>- A built-in Python module that allows you to read and work with CSV (Comma-Separated Values) files. </li>
-                    <li><spam class="project_page_skill"><b>JSON</b></spam>- JavaScript Object Notation is a lightweight data interchange format that is easy for humans to read and write, as well as for machines to read and generate.</li>
-                    <li><spam class="project_page_skill"><b>Tkinter</b></spam>- Tkinter is a built-in Python library used for creating graphical user interfaces (GUIs).</li>
+                    <li><spam class="project_page_skill">Flask</spam>- Flask is a Python web framework that creates dynamic and interactive web experiences. Flask simplifies web development by offering pre-built components and a clear structure for building web applications, allowing me to create simple, yet powerful applications. </li>
+                    <li><spam class="project_page_skill">Django</spam>- Django is a also powerful web framework to create robust and dynamic websites. </li>
+                    <li><spam class="project_page_skill">NLTK</spam>- Natural Language Toolkit is a Python library and platform for working with human language data, particularly for tasks related to natural language processing (NLP) and text analysis.</li>
+                    <li><spam class="project_page_skill">Beautiful Soup</spam>- Beautiful Soup is a Python library used for web scraping purposes. Beautiful Soup makes it easier to navigate and manipulate the structure of web pages, making web scraping tasks easier.</li>
+                    <li><spam class="project_page_skill">PyPDF2</spam>- A Python library for working with PDF files. such as reading, extracting text, merging multiple PDFs, splitting PDFs.</li>
+                    <li><spam class="project_page_skill">CSV Reader</spam>- A built-in Python module that allows you to read and work with CSV (Comma-Separated Values) files. </li>
+                    <li><spam class="project_page_skill">JSON</spam>- JavaScript Object Notation is a lightweight data interchange format that is easy for humans to read and write, as well as for machines to read and generate.</li>
+                    <li><spam class="project_page_skill">Tkinter</spam>- Tkinter is a built-in Python library used for creating graphical user interfaces (GUIs).</li>
                 </ul>
             </div>
 
@@ -105,7 +105,7 @@
                         <div class="project_skills_skill">MySQL</div>
                     </div>
 
-                      <h3 class="github_link" id="github_link">Github Link:</h3>
+                      <h3 class="github_link" id="github_link">GitHub Project Link:</h3>
                       <a class="link" href="https://github.com/Richard-Zhao132/Python-Flask-Web-Server" target="_blank">https://github.com/Richard-Zhao132/Python-Flask-Web-Server</a>
                 </div>
             
@@ -135,7 +135,7 @@
                           <div class="project_skills_skill">Anaconda</div>
                       </div>
 
-                        <h3 class="github_link">Github Link:</h3>
+                        <h3 class="github_link">GitHub Link:</h3>
                       <a class="link" href="https://github.com/Richard-Zhao132/Yelp-Reviews-Sentimental-Analysis-Program" target="_blank">https://github.com/Richard-Zhao132/Yelp-Reviews-Sentimental-Analysis-Program</a>
                     </div>
                 <div class="project_row-image">
@@ -162,7 +162,7 @@
                         <div class="project_skills_skill">Anaconda</div>
                     </div>
 
-                      <h3 class="github_link">Github Link:</h3>
+                      <h3 class="github_link">GitHub Link:</h3>
                       <a class="link" href="https://github.com/Richard-Zhao132/Python-BeautifulSoup-Project-NotablesOnWiki" target="_blank">https://github.com/Richard-Zhao132/Python-BeautifulSoup-Project-NotablesOnWiki</a>
                 </div>
                 
@@ -190,7 +190,7 @@
                         <div class="project_skills_skill">VS Code</div>
                     </div>
 
-                      <h3 class="github_link">Github Link:</h3>
+                      <h3 class="github_link">GitHub Link:</h3>
                       <a class="link" href="https://github.com/Richard-Zhao132/Python-PDF-Splitter-And-PDF-Merger" target="_blank">https://github.com/Richard-Zhao132/Python-PDF-Splitter-And-PDF-Merger</a>
                 </div>
                 <div class="project_row-image">
@@ -215,7 +215,7 @@
                         <div class="project_skills_skill">Notepad</div>
                     </div>
 
-                      <h3 class="github_link">Github Link:</h3>
+                      <h3 class="github_link">GitHub Link:</h3>
                       <a class="link" href="https://github.com/Richard-Zhao132/Python-Student-Database-GUI" target="_blank">https://github.com/Richard-Zhao132/Python-Student-Database-GUI</a>
                 </div>
                 <div class="project_row-image">
@@ -242,6 +242,9 @@
 </body>
 
 
+
+<!--
+
 <script>
     window.onscroll = function() {myFunction()};
 
@@ -257,41 +260,50 @@
     }
 </script>
 
+-->
+
 <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".navbar-menu-mobile");
-    const navItemHome = document.querySelector(".home")
-    const navItemAbout = document.querySelector(".about")
-    const navItemProjects = document.querySelector(".projects")
-    const navItemContact = document.querySelector(".contact")
+    let prevScrollPos = window.pageYOffset;
+    let initialScroll = true;
+    
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+      if (initialScroll) {
+        initialScroll = false; // Ignore the initial scroll
+      } else if (prevScrollPos > currentScrollPos) {
+        // User is scrolling up
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        // User is scrolling down
+        document.getElementById("navbar").style.top = "-100px"; // Adjust the value as needed
+      }
+      prevScrollPos = currentScrollPos;
+    };
+         
+    
+ </script>
 
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-        about.classList.toggle("active")
-    } )
+    <script>
+       const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-menu-mobile");
 
-    navItemHome.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    } )
+hamburger.addEventListener("click", toggleMobileMenu);
 
-    navItemAbout.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    } )
+function toggleMobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
 
-    navItemProjects.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    } )
-
-    navItemContact.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    } )
-
-
-</script>
+// Add a scroll event listener to handle scrolling
+window.addEventListener("scroll", function () {
+  if (navMenu.classList.contains("active")) {
+    // If the mobile menu is active and scrolling occurs, close the menu and reset its position
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+});
+    
+    
+    </script>
 
 </html>
